@@ -8,6 +8,7 @@ import Error from "./Components/Error";
 
 import Users from "./Components/Users";
 import UserDetels from "./Components/UserDetels";
+import Form from "./Components/Form";
 
 const routes = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const routes = createBrowserRouter([
         element: <UserDetels />,
         loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`),
       },
+      {
+        path:"/form",
+        element : <Form />
+      }
     ],
   },
 ]);
